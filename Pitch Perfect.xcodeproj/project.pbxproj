@@ -14,6 +14,7 @@
 		290DB66B1C84C1CE0064A39A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 290DB6691C84C1CE0064A39A /* LaunchScreen.storyboard */; };
 		290DB6761C84C1CF0064A39A /* Pitch_PerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290DB6751C84C1CF0064A39A /* Pitch_PerfectTests.swift */; };
 		290DB6811C84C1CF0064A39A /* Pitch_PerfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290DB6801C84C1CF0064A39A /* Pitch_PerfectUITests.swift */; };
+		290DB68F1C9F4DD20064A39A /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290DB68E1C9F4DD20064A39A /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		290DB67C1C84C1CF0064A39A /* Pitch PerfectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pitch PerfectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		290DB6801C84C1CF0064A39A /* Pitch_PerfectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_PerfectUITests.swift; sourceTree = "<group>"; };
 		290DB6821C84C1CF0064A39A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		290DB68E1C9F4DD20064A39A /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				290DB6671C84C1CE0064A39A /* Assets.xcassets */,
 				290DB6691C84C1CE0064A39A /* LaunchScreen.storyboard */,
 				290DB66C1C84C1CE0064A39A /* Info.plist */,
+				290DB68E1C9F4DD20064A39A /* PlayerViewController.swift */,
 			);
 			path = "Pitch Perfect";
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					290DB65C1C84C1CE0064A39A = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 6VYMUT4CEY;
 					};
 					290DB6701C84C1CF0064A39A = {
 						CreatedOnToolsVersion = 7.2;
@@ -258,6 +262,7 @@
 			files = (
 				290DB6631C84C1CE0064A39A /* ViewController.swift in Sources */,
 				290DB6611C84C1CE0064A39A /* AppDelegate.swift in Sources */,
+				290DB68F1C9F4DD20064A39A /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,10 +404,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Pitch Perfect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jonbrown.Pitch-Perfect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +417,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Pitch Perfect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jonbrown.Pitch-Perfect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +493,7 @@
 				290DB6871C84C1CF0064A39A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		290DB6881C84C1CF0064A39A /* Build configuration list for PBXNativeTarget "Pitch PerfectTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +502,7 @@
 				290DB68A1C84C1CF0064A39A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		290DB68B1C84C1CF0064A39A /* Build configuration list for PBXNativeTarget "Pitch PerfectUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +511,7 @@
 				290DB68D1C84C1CF0064A39A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
