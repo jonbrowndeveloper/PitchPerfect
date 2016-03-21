@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eor-tI-adP">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.37647058820000001" blue="0.99607843139999996" alpha="0.47000000000000003" colorSpace="calibratedRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kY-YE-Dtb">
                                 <rect key="frame" x="250" y="250" width="100" height="100"/>
                                 <state key="normal" image="microphone-iphone"/>
@@ -39,7 +43,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap to start recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qo-Qd-f6Q">
                                 <rect key="frame" x="219" y="366" width="162" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8g8-hP-saV">
@@ -54,22 +58,26 @@
                                     <constraint firstAttribute="width" constant="80" id="4ht-e2-rch"/>
                                     <constraint firstAttribute="height" constant="80" id="hF8-pF-e0X"/>
                                 </constraints>
-                                <state key="normal" image="stop-iphone"/>
+                                <state key="normal" image="stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xc8-Qk-h7v"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R40-ds-Rze" secondAttribute="bottom" constant="56" id="0Oh-ZL-yci"/>
                             <constraint firstItem="R40-ds-Rze" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5HH-js-X1L"/>
+                            <constraint firstItem="Eor-tI-adP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5rb-hb-uPo"/>
                             <constraint firstItem="3qo-Qd-f6Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CL6-Ek-6Eu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Eor-tI-adP" secondAttribute="trailing" constant="-20" id="IqP-XB-wWK"/>
                             <constraint firstItem="3qo-Qd-f6Q" firstAttribute="top" secondItem="9kY-YE-Dtb" secondAttribute="bottom" constant="16" id="VGx-iQ-9bf"/>
+                            <constraint firstItem="Eor-tI-adP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bXF-je-acQ"/>
                             <constraint firstItem="T8b-PK-5bK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g8c-Mt-HHL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="T8b-PK-5bK" secondAttribute="bottom" constant="56" id="gls-Xb-mQ4"/>
                             <constraint firstItem="9kY-YE-Dtb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="toH-Mt-9Dm"/>
                             <constraint firstItem="9kY-YE-Dtb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wSC-73-uxR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Eor-tI-adP" secondAttribute="bottom" id="yY5-o5-iqs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="3Hh-wO-Xa7"/>
@@ -102,20 +110,9 @@
                                     <constraint firstAttribute="width" constant="80" id="4nC-6V-ZRL"/>
                                     <constraint firstAttribute="height" constant="80" id="OtH-Cf-VbC"/>
                                 </constraints>
-                                <state key="normal" title="Pause Button" image="pause_grey"/>
+                                <state key="normal" title="StopButton" image="stop"/>
                                 <connections>
-                                    <action selector="pauseAudio:" destination="Fup-b5-5E5" eventType="touchUpInside" id="8Fa-ki-S1b"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6z-RR-MuZ">
-                                <rect key="frame" x="260" y="464" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="NPn-fu-xYa"/>
-                                    <constraint firstAttribute="width" constant="80" id="Zrt-mq-i0u"/>
-                                </constraints>
-                                <state key="normal" title="Resume Button" image="resume_grey"/>
-                                <connections>
-                                    <action selector="resumeAudio:" destination="Fup-b5-5E5" eventType="touchUpInside" id="RNJ-iw-TA1"/>
+                                    <action selector="stopAudio:" destination="Fup-b5-5E5" eventType="touchUpInside" id="EmE-mE-yih"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oue-H1-odP">
@@ -205,8 +202,6 @@
                             <constraint firstItem="UlJ-IY-cFo" firstAttribute="top" secondItem="Mh2-JJ-rjZ" secondAttribute="bottom" constant="30" id="C8K-fq-srF"/>
                             <constraint firstItem="HLA-0o-AYd" firstAttribute="top" secondItem="LKd-Pk-KHF" secondAttribute="bottom" constant="30" id="HQx-dB-XGS"/>
                             <constraint firstItem="UlJ-IY-cFo" firstAttribute="leading" secondItem="uUP-j9-ygU" secondAttribute="leadingMargin" constant="40" id="Ktb-2X-62U"/>
-                            <constraint firstItem="su7-Eg-PKC" firstAttribute="top" secondItem="Y6z-RR-MuZ" secondAttribute="bottom" constant="56" id="NUk-4f-KGG"/>
-                            <constraint firstItem="Y6z-RR-MuZ" firstAttribute="centerX" secondItem="uUP-j9-ygU" secondAttribute="centerX" id="OtE-Ml-GzD"/>
                             <constraint firstItem="Oue-H1-odP" firstAttribute="leading" secondItem="uUP-j9-ygU" secondAttribute="leadingMargin" constant="40" id="VQY-JN-C0R"/>
                             <constraint firstItem="Mh2-JJ-rjZ" firstAttribute="top" secondItem="Oue-H1-odP" secondAttribute="bottom" constant="30" id="dHb-FH-Yyg"/>
                             <constraint firstItem="Mh2-JJ-rjZ" firstAttribute="leading" secondItem="uUP-j9-ygU" secondAttribute="leadingMargin" constant="40" id="iwF-QE-c4d"/>
@@ -222,10 +217,9 @@
                         <outlet property="fastButtonOutlet" destination="LKd-Pk-KHF" id="sXt-5K-nOQ"/>
                         <outlet property="highPitchButtonOutlet" destination="HLA-0o-AYd" id="SzR-22-Ld8"/>
                         <outlet property="lowPitchButtonOutlet" destination="Mh2-JJ-rjZ" id="AAC-yV-JZp"/>
-                        <outlet property="pauseButtonOutlet" destination="gVd-nL-oci" id="YUA-b7-VdR"/>
-                        <outlet property="resumeButtonOutlet" destination="Y6z-RR-MuZ" id="c8b-1j-3Qs"/>
                         <outlet property="reverbButtonOutlet" destination="UlJ-IY-cFo" id="XYa-tI-Eid"/>
                         <outlet property="slowButtonOutlet" destination="Oue-H1-odP" id="WP3-bi-FjL"/>
+                        <outlet property="stopButtonOutlet" destination="gVd-nL-oci" id="RjM-Z3-FbE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxo-8Q-n2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -258,9 +252,8 @@
         <image name="fast" width="200" height="200"/>
         <image name="microphone-iphone" width="100" height="100"/>
         <image name="pause_grey" width="80" height="80"/>
-        <image name="resume_grey" width="80" height="80"/>
         <image name="reverb" width="160" height="160"/>
         <image name="slow" width="200" height="200"/>
-        <image name="stop-iphone" width="50" height="50"/>
+        <image name="stop" width="80" height="80"/>
     </resources>
 </document>
