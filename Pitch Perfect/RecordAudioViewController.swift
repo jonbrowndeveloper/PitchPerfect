@@ -55,6 +55,8 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func recordStart(sender: AnyObject)
     {
+        helpLabel.text = "recording in progress..."
+        
         if (startedRecording == false)
         {
             // start recording
@@ -92,8 +94,6 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
             
             pauseButtonOutlet.hidden = false
             
-            helpLabel.hidden = true
-
         }
         else
         {
@@ -110,9 +110,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
             stopButtonOutlet.hidden = true;
             
             recordButtonOutlet.enabled = false;
-            
-            helpLabel.hidden = true
-        }
+    }
         
         
     }
@@ -132,8 +130,6 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
         stopButtonOutlet.hidden = false
         
         // set help label text and show
-        
-        helpLabel.hidden = false
         
         helpLabel.text = "tap to resume recording"
         
